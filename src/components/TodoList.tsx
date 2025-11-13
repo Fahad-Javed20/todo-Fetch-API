@@ -18,7 +18,6 @@ const TodoList = () => {
       const data = await response.json();
       setTodos(data.todos);
     } catch (error) {
-      console.error("There is an error in fetching:", error);
       setErrors((error as Error).message);
     } finally {
       setLoading(false);
